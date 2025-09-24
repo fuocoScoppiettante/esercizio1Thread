@@ -31,7 +31,7 @@ public class Main {
         classifica.add(c4);
         classifica.add(c5);
 
-        classifica.sort(Comparator.comparingLong(Cavallo :: gettArrivo()));
+        classifica.sort(Comparator.comparingLong(Cavallo :: gettArrivo));
 
     }
 }
