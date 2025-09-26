@@ -5,11 +5,11 @@ import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Cavallo c1 = new Cavallo("Cavallo1");
-        Cavallo c2 = new Cavallo("Cavallo2");
-        Cavallo c3 = new Cavallo("Cavallo3");
-        Cavallo c4 = new Cavallo("Cavallo4");
-        Cavallo c5 = new Cavallo("Cavallo5");
+        Cavallo c1 = new Cavallo("Cavallo 1");
+        Cavallo c2 = new Cavallo("Cavallo 2");
+        Cavallo c3 = new Cavallo("Cavallo 3");
+        Cavallo c4 = new Cavallo("Cavallo 4");
+        Cavallo c5 = new Cavallo("Cavallo 5");
 
         ArrayList<Cavallo> classifica = new ArrayList<>();
 
@@ -33,5 +33,9 @@ public class Main {
 
         classifica.sort(Comparator.comparingLong(Cavallo :: gettArrivo));
 
+        for(int i = 0; i < classifica.size(); i++){
+            System.out.println((i+1) + "° --> " + classifica.get(i).getNome() + " Tempo: " + classifica.get(i).gettArrivo() + "s" );
+
+        }
     }
 }
